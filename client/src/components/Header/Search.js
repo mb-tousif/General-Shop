@@ -1,11 +1,31 @@
-import { Box, InputBase } from '@mui/material';
 import React from 'react';
+import styled from '@emotion/styled';
+import { Box, InputBase } from '@mui/material';
+import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 
 const Search = () => {
+    const SearchBox = styled(Box)`
+      background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      color: green;
+      width: 38%;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-weight: bold;
+      display: flex
+    `;
+    const CustomInputBase = styled(InputBase)`
+      color: green;
+      width: 100%;
+      padding-left: 5%;
+    `;
+
     return (
-     <Box sx={{borderRadius: "2px", marginLeft:"10px"}}>
-        <InputBase sx={{ background:"linear-gradient(to top, #0ba360 0%, #3cba92 100%)", paddingLeft: "20px"}} noWrap placeholder="Search your products brands and more"/>
-     </Box>
+      <SearchBox>
+        <CustomInputBase placeholder="Search your Products Brands and More" />
+        <Box>
+          <ContentPasteSearchIcon sx={{margin: 1,}}/>
+        </Box>
+      </SearchBox>
     );
 };
 
