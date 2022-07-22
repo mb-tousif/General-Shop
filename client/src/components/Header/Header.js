@@ -9,18 +9,18 @@ const Header = () => {
   const CustomizedAppBar = styled(AppBar)`
     background: linear-gradient(225deg, #ff057c 30%, #8d0b93 50%, #321575 100%);
     height: 55px;
-  `;
+  `
   const Component = styled(Box)`
     margin-left: 12%;
     line-height: 0;
-    `
-    const CustomsText = styled(Typography)`
+  `
+  const CustomsText = styled(Typography)`
     line-height: 0;
     color: turquoise;
     font-size: 10px;
     font-style: italic;
     margin-left: 15px;
-  `;
+  `
   return (
     <CustomizedAppBar>
       <Toolbar style={{minHeight: 55}}>
