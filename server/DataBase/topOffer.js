@@ -1,0 +1,198 @@
+export const topOffer = [
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/kyrlifk0/pressure-cooker/7/f/j/yes-1-14780-pigeon-original-imagax3kw4gdmcgd.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/kyrlifk0/pressure-cooker/h/7/p/yes-1-14780-pigeon-original-imagax3kmzdje6kt.jpeg?q=70",
+    title: {
+      shortTitle: "Pressure Cookers",
+      longTitle:
+        "Pigeon Brio Triply Pressure Cooker- 2 Litre 2 L Induction Bottom Pressure Cooker  (Stainless Steel)",
+    },
+    price: {
+      mrp: 2495,
+      cost: 1559,
+      discount: "37%",
+    },
+    quantity: 1,
+    description:
+      "Cook better with Pigeon Brio Tri-Ply. This Stainless Steel Pressure Cooker is Shinny, Beautiful and brings the Dazzle of Stainless Steel 304 with unbeatable toughness and style. It has a Sandwich base which covers entire pressure cooker bottom for efficient heat distribution. With the 3 layers Sandwhich bottom you can cook your food faster on all types of heat sources and this versatile Pressure cooker provides you maximum utility. For the user safety it has conventional whistle and safety velves system, ergonomic easy grip handle to enjoy your cooking.",
+    discount: "Minimum 37% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/l51d30w0/bottle/i/o/e/-original-imagftycpmnxmjuh.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/l51d30w0/bottle/l/h/r/-original-imagftyc4npuxz3z.jpeg?q=70",
+    title: {
+      shortTitle: "Stainless Steel Bottle",
+      longTitle: "Pigeon Inox Hydra 900 ml Bottle  (Pack of 1, Silver, Steel)",
+    },
+    price: {
+      mrp: 495,
+      cost: 299,
+      discount: "39%",
+    },
+    quantity: 1,
+    description:
+      "This a rough and tough Inox Hydra drinking water bottle from Pigeon, made with High-end Food Grade Stainless Steel material. This is the product you can trust for its good quality, light weight, wider mouth for easy drinking, BPA free, easy grip and longer durability with 1 year warranty period from your trusted Brand Pigeon. It is suitable for all (sportman & students) and there is no limitions on how you want to use the bottle and where you want to use it. Inox Hydra comes in two variant 700 ml and 900 ml, choose your companion.",
+    discount: "Minimum 39% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/kxgfzbk0/lunch-box/f/4/f/300-lunch-box-blue-fenvee-5-original-imag9ws5xkter25h.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/kxgfzbk0/lunch-box/x/u/w/300-lunch-box-blue-fenvee-5-original-imag9ws5ha8dbqyh.jpeg?q=70",
+    title: {
+      shortTitle: "Lunch Box with 5 Containers",
+      longTitle:
+        "FENVEE LUNCH BOX- BLUE 5 Containers Lunch Box  (300 ml, Thermoware)",
+    },
+    price: {
+      mrp: 1500,
+      cost: 459,
+      discount: "69%",
+    },
+    quantity: 1,
+    description:
+      "Introducing The Fenvee Tiffin Box 300ML, 3 Container Vacuum-Insulated Lunch Box For Carrying Warm & Fresh Home-Cooked Meals. Fenvee Tiffin Box 300ML Lunch Box Ensures Your Food Remains Warm For Up To 3-4 Hours After Packing Your Meal.Cover Bag Allows You To Keep This Tiffin In Your Hand Without Spoiling Food From Container. Net Inside The Cover Is Provided For Spoon,Fork & Tissue Paper. Aside Its Provision To Keep Small Size Water Bottle. What's In The Box: 1. Cotton Bag With Handle Shape. 2.Stainless Steel Food Containers Set Of 3 With Each Container Cap Has A Separate Lid That Allows You To Remove Air Inside Container. 3.One Plastic Container To Keep Butter Milk Or Dal. 4.One Oval Shape Container With 2 Partition For Keeping Roti & Papad.",
+    discount: "Minimum 69% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/k4lmv0w0/office-study-chair/f/r/4/iron-ag-9001-savya-home-original-imafnbtqvsgammwf.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/k4fx3m80/office-study-chair/w/5/f/pp-polypropylene-a-9001-apex-chairs-original-imafnbtq5prepuwr.jpeg?q=70",
+    title: {
+      shortTitle: "GAMING CHAIR",
+      longTitle:
+        "APEX CHAIRS SAVYA HOME CRUSADER XI GAMING CHAIR Leatherette Office Executive Chair  (Black, Red, DIY(Do-It-Yourself))",
+    },
+    price: {
+      mrp: 29500,
+      cost: 1431,
+      discount: "61%",
+    },
+    quantity: 1,
+    description:
+      "Office chair with pneumatic gas lift for height adjustment and 360 degree swivel and tilt movement with breathable mesh fabric",
+    discount: "Minimum 61% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/l432ikw0/headphone/n/g/n/-original-imagf2yzeffezg4g.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/500/500/l3t2fm80/headphone/q/u/f/-original-imageuqfenq7qbf4.jpeg?q=70",
+    title: {
+      shortTitle: "Airdopes 191G",
+      longTitle:
+        "boAt Airdopes 191G with 6mm Dual Drivers, Quad Mics ENx Tech & Beast Mode for Gaming Bluetooth Headset  (Sport Blue, True Wireless)",
+    },
+    price: {
+      mrp: 3490,
+      cost: 1799,
+      discount: "48%",
+    },
+    quantity: 1,
+    description:
+      "It's time to Be The Game, with Airdopes 191G TWS earbuds. The 2x 6mm dual drivers in the earbuds are there to deliver an immersive listening time. Our ENx Tech enabled quad mics help you to be heard crystal clear across voice calls. The presence of BEAST Mode makes the low latency experience a reality for your gaming and entertainment sessions. It comes equipped with Bluetooth v5.2 wireless technology so that you can enjoy all of your sessions lag-free. The IWP tech enabled TWS earbuds power on as soon as the case lid gets opened. Airdopes 191G provides a total playback time of up to 30HRS including up to 6HRS of playtime per earbud. With an IPX5 marked water resistant build, the earbuds offer flexibility whether you are at the gym or traversing those distant terrains. You can command playback, hands-free and activate voice assistant with ease via the instant response touch controls. Now, stay indulged in your playlists and enjoy a truly immersive auditory experience on Airdopes 191G.",
+    discount: "Minimum 48% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/l2nmnww0/air-conditioner-new/3/f/w/-original-imagdybu7zpw6fzp.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/l2nmnww0/air-conditioner-new/z/b/6/-original-imagdybuu33nfkqb.jpeg?q=70",
+    title: {
+      shortTitle: "LG AC",
+      longTitle:
+        "LG Super Convertible AC - White (Model:-PS-Q19MNZF, Copper Condenser)",
+    },
+    price: {
+      mrp: 76990,
+      cost: 40499,
+      discount: "39%",
+    },
+    quantity: 1,
+    description:
+      "AI DUAL InverterLG's DUAL Inverter Air conditioners with variable tonnage technology are now smarter with the addition of Artificial Intelligence. LG Super Convertible 6-in-1 Cooling 1.5 Ton 5 Star Split Dual Inverter AI, 4 Way Swing, HD Filter with Anti-Virus Protection Designer Series AC - White  (PS-Q19MNZF, Copper Condenser)",
+    discount: "Minimum 39% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/ks99aq80/hammock-swing/d/r/a/soft-cotton-hammock-hanging-swing-chair-for-indoor-outdoor-original-imag5v395s6u8ct4.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/kpedle80/hammock-swing/x/s/f/soft-cotton-hammock-hanging-swing-chair-for-indoor-outdoor-original-imag3n7jydzkvqzw.jpeg?q=70",
+    title: {
+      shortTitle: "Hanging Swing Chair",
+      longTitle:
+        "Curio Centre Hammock Hanging Swing Chair Cotton Hammock  (Blue, Pre-assembled)",
+    },
+    price: {
+      mrp: 4999,
+      cost: 1808,
+      discount: "63%",
+    },
+    quantity: 1,
+    description:
+      'STYLISH & COMFORTABLE: This stylish hammock chair is comfortable and durable with dimensions (LxBxH) 33" x 30" x 85".The 100% cotton material is soft warm, and breathable, it makes the hammock chair quite comfortable to sit in while reading, watching TV, or listening to music. It is a great choice for sensory swing',
+    discount: "Minimum 63% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/kxf0jgw0/sofa-sectional/h/o/s/-original-imag9vcp7zydgzeg.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/kxp0mfk0/sofa-sectional/2/p/a/-original-imaga3ze3m8ykbzy.jpeg?q=70",
+    title: {
+      shortTitle: "L Shape",
+      longTitle:
+        "Perfect Homes Porto L Shape Fabric 6 Seater Sofa  (Finish Color - Grey, DIY(Do-It-Yourself))",
+    },
+    price: {
+      mrp: 40000,
+      cost: 20000,
+      discount: "50%",
+    },
+    quantity: 1,
+    description:
+      "Porto is a splendid sectional sofa comprising of a lounger a seater and three cushion pillows proportionately designed seater with 67 by 30 and lounger 67 by 30 in width and breath packed with high density foam and stitched with the most exquisite campion fabric to give you the best reclining experience it is available in four different colors for you to choose from black and gray beige black or grey a free trial and supports tool free assembly making the whole experience extremely hassle free all within the most affordable prices with no compromise on quality or comfort.",
+    discount: "Minimum 50% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/kr2e3680/dslr-camera/j/1/n/eos-m50-mark-ii-vlogger-kit-eos-m50-mark-ii-vlogger-kit-canon-original-imag4xzzrhfeycuu.jpeg?q=70",
+    detailUrl:
+      "https://rukminim1.flixcart.com/image/600/600/kr2e3680/dslr-camera/j/1/n/eos-m50-mark-ii-vlogger-kit-eos-m50-mark-ii-vlogger-kit-canon-original-imag4xzzrhfeycuu.jpeg?q=70",
+    title: {
+      shortTitle: "Canon Mark II Camera",
+      longTitle:
+        "Canon EOS M50 Mark II Vlogger Kit Mirrorless Camera EF-M 15-45mm Lens  (Black)",
+    },
+    price: {
+      mrp: 74295,
+      cost: 59436,
+      discount: "20%",
+    },
+    quantity: 1,
+    description: "",
+    discount: "Minimum 20% Off",
+    tagline: "Grab Now!",
+  },
+  {
+    url: "https://rukminim1.flixcart.com/image/200/200/kkec4280/monitor/u/g/c/lc27g75tqswxxl-lc27g75tqswxxl-samsung-original-imafzqvfcahbarfg.jpeg?q=70",
+    detailUrl: "https://rukminim1.flixcart.com/image/600/600/kkec4280/monitor/h/b/p/lc27g75tqswxxl-lc27g75tqswxxl-samsung-original-imafzqvf4ryrazd7.jpeg?q=70",
+    title: {
+      shortTitle: "SAMSUNG Monitor",
+      longTitle: "SAMSUNG Curved Full HD LED Gaming Monitor.",
+    },
+    price: {
+      mrp: 66000,
+      cost: 41941,
+      discount: "36%",
+    },
+    quantity: 1,
+    description:
+      "SAMSUNG 27 inch Curved Full HD LED Backlit VA Panel Gaming Monitor. Model: LC27G75TQSWXXL, NVIDIA G Sync, Response Time: 1 ms, 240 Hz Refresh Rate",
+    discount: "Minimum 36% Off",
+    tagline: "Grab Now!",
+  },
+];
