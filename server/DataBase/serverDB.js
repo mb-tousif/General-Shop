@@ -10,4 +10,4 @@ const connection = async () => {
     }
 }
 
-export default connection
+export default connection;
