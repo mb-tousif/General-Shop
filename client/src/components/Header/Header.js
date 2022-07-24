@@ -6,6 +6,7 @@ import Search from "./Search";
 import styled from "@emotion/styled";
 import CustomNavLink from "./CustomNavLink";
 const Header = () => {
+
   const CustomizedAppBar = styled(AppBar)`
     background: linear-gradient(225deg, #ff057c 30%, #8d0b93 50%, #321575 100%);
     height: 55px;
@@ -32,7 +33,7 @@ const Header = () => {
               <Box component={"span"} style={{ color: "orange" }}>
                 Plus
               </Box>
-            <InsightsIcon style={{ color: "green", fontSize: 10, marginLeft: 4}} />
+              <InsightsIcon style={{ color: "green", fontSize: 10, marginLeft: 4}} />
             </CustomsText>
           </Box>
         </Component>

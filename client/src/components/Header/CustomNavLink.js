@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Button, Typography } from "@mui/material";
 import styled from '@emotion/styled';
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import LoginModal from '../Login/LoginModal';
 const CustomNavLink = () => {
+  const [open, setOpen] = useState(false);
+  const handleDialog = () =>{
+    setOpen(true);
+  }
     const CustomButton = styled(Button)`
       background: orange;
       color: green;
@@ -24,12 +29,13 @@ const CustomNavLink = () => {
     `;
     return (
       <Box style={{display: "flex"}}>
-        <CustomButton variant="outlined" size="medium">Login</CustomButton>
+        <CustomButton variant="outlined" size="medium" onClick={()=>handleDialog()}>Login</CustomButton>
         <CustomButton variant="outlined" size="medium">Become a Seller</CustomButton>
         <CustomBox>
             <CustomTypography>More <KeyboardArrowDownIcon/></CustomTypography>
             <CustomTypography><ShoppingBasketIcon/>&nbsp;Cart</CustomTypography>      
         </CustomBox>
+        <LoginModal open={open} setOpen={setOpen}/>
       </Box>
     );
 };
