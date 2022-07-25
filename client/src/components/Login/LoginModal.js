@@ -1,6 +1,7 @@
 import { Box, Button, Dialog, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import LoginImg from '../../Assets/images/loginForm.png'
+import { authenticateSignup } from '../../Service/API';
 
 const LoginModal = ({ open, setOpen}) => {
   const accountInitialValues = {
@@ -41,7 +42,12 @@ const LoginModal = ({ open, setOpen}) => {
     console.log(e.target.value);
     console.log(signup);
   };
-
+  const signupUser = async () => {
+    let res = await authenticateSignup(signup);
+    if (!res) return;
+    // handleClose();
+    // setAccount(signup.username);
+  };
   const handleClose = () => {
     setOpen(false);
     toggleAccount(accountInitialValues.login)
@@ -53,7 +59,7 @@ const LoginModal = ({ open, setOpen}) => {
         <Box sx={{ background: "#321575", height: "100%", border: "5px", width: "40%", color: "rgb(249 250 251)", overflow: "hidden" }}>
           <Typography sx={{ padding: "10%"}} variant='h5'>{account.heading}</Typography>
           <Typography sx={{ padding: "10%"}}>{account.subHeading}</Typography>
-          <Box sx={{display:"flex", justifyItem: "center", justifyContent: "center"}}><img src={LoginImg} width="70%" height="200" alt="log" /></Box>
+          <Box sx={{display:"flex", justifyItem: "center", justifyContent: "center"}}><img src={LoginImg} width="70%" height="200px" alt="log" /></Box>
         </Box>
         {
           account.view === "login" ?
@@ -77,7 +83,7 @@ const LoginModal = ({ open, setOpen}) => {
           <TextField marginTop='20px' onBlur={(e) => onInputChange(e)} name="email" label="Enter Email" variant="standard"/>
           <TextField marginTop='20px' onBlur={(e) => onInputChange(e)} name="password" label="Enter Password" variant="standard"/>
           <TextField marginTop='20px' onBlur={(e) => onInputChange(e)} name="phone" label="Enter Phone Number" variant="standard"/>
-          <Button style={{color:"#fff", marginTop: "20px", background: "#8d0b93",textTransform: "none"}}>Continue</Button>
+          <Button onClick={() => signupUser()} style={{color:"#fff", marginTop: "20px", background: "#8d0b93",textTransform: "none"}}>Continue</Button>
           {/* <Typography style={{cursor:"pointer", marginTop:'20px', textAlign: "center", color:"#321575"}} variant="caption">New to General Shop? Create an account</Typography> */}
         </Box>
         }
