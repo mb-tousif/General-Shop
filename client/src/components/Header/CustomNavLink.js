@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Box, Button, Typography } from "@mui/material";
 import styled from '@emotion/styled';
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 // import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import LoginModal from '../Login/LoginModal';
+import { DataContext } from '../../ContextApi/DataProvider';
+import Profile from './Profile';
 const CustomNavLink = () => {
   const [open, setOpen] = useState(false);
+  const { account, setAccount } = useContext(DataContext);
   const handleDialog = () =>{
     setOpen(true);
   }
@@ -29,7 +32,10 @@ const CustomNavLink = () => {
     `;
     return (
       <Box style={{display: "flex"}}>
-        <CustomButton variant="outlined" size="medium" onClick={()=>handleDialog()}>Login</CustomButton>
+        {
+          account ? <Profile account = {account}  setAccount={ setAccount}/> :
+          <CustomButton variant="outlined" size="medium" onClick={()=>handleDialog()}>Login</CustomButton>
+        }
         <CustomButton variant="outlined" size="medium">Become a Seller</CustomButton>
         <CustomBox>
             <CustomTypography>More <KeyboardArrowDownIcon/></CustomTypography>
