@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import { getProductReducer } from "./reducers/productReducer";
+import { getProductReducer } from "../Reducer/getFurnitureReducer";
 
 //* multiple reducer have to get combined with combineReducer fn
 //* combineReducer takes an obj, inside that obj we pass multiple reducers

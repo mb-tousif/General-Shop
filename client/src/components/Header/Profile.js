@@ -6,7 +6,7 @@ const Profile = ({ account, setAccount }) => {
     background: orange;
     color: green;
     margin-left: 10px;
-    margintop: 2px;
+    margin-top: 2px;
   `;
 
   const [open, setOpen] = useState(false);
@@ -25,14 +25,16 @@ const Profile = ({ account, setAccount }) => {
       <Box onClick={handleClick}>
         <CustomButton
           onClick={() => {
-            handleClose();
-            logoutUser();
+            handleClose()
           }}
         >
           {account}
         </CustomButton>
         <Menu anchorEl={open} open={Boolean(open)} onClose={handleClose}>
-          <MenuItem onClick={handleClose}>
+          <MenuItem onClick={() => {
+            handleClose();
+            logoutUser();
+          }}>
             <PowerSettingsNewIcon />
             Logout
           </MenuItem>

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 import React, { Fragment, useEffect } from 'react';
 import HomeBanner from './HomeBanner';
-import { getProducts } from "../../redux/actions/productAction";
+import { getFurniture } from "../../Redux/Action/furnitureAction";
 import { useDispatch, useSelector } from "react-redux";
 import TopNav from './TopNav';
 
@@ -14,11 +14,11 @@ const Home = () => {
   //* The useDispatch hook is used to dispatch an action while useSelector hook is used to get the state from the redux store.
   // const getProducts = useSelector((state) => state.getProducts);
   // const {products}  = getProducts;
-  const products = useSelector((state) => state.getProducts);
-  console.log(products);
+  const furntures = useSelector((state) => state.getFurniture);
+  console.log(furntures);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getFurniture());
   }, [dispatch]);
 
   return (
