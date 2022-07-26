@@ -5,6 +5,7 @@ import HomeBanner from './HomeBanner';
 import { getFurniture } from "../../Redux/Action/furnitureAction";
 import { useDispatch, useSelector } from "react-redux";
 import TopNav from './TopNav';
+import { getTopOffer } from '../../Redux/Action/topOfferAction';
 
 const CustomBannerBG = styled(Box)`
 background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
@@ -15,10 +16,12 @@ const Home = () => {
   // const getProducts = useSelector((state) => state.getProducts);
   // const {products}  = getProducts;
   const furntures = useSelector((state) => state.getFurniture);
-  console.log(furntures);
+  const topOffers = useSelector((state) => state.getTopOffer);
+  console.log(furntures, topOffers);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getFurniture());
+    dispatch(getTopOffer());
   }, [dispatch]);
 
   return (
