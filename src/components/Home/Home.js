@@ -3,7 +3,6 @@ import { Box } from '@mui/material';
 import React, { Fragment, useEffect } from 'react';
 import HomeBanner from './HomeBanner';
 import TopNav from './TopNav';
-import DealOfTheDay from './DealOfTheDay';
 import { useDispatch, useSelector } from "react-redux";
 import { getTopOffer } from '../../Redux/Action/topOfferAction.js';
 import { getFashion } from "../../Redux/Action/fashionAction.js";
@@ -11,6 +10,7 @@ import { getFurniture } from "../../Redux/Action/furnitureAction.js";
 import FashionSlide from './FashionSlide';
 import FurnitureSlide from './FurnitureSlide';
 import TopOfferSlide from './TopOfferSlide';
+import PaymentBannerSlide from './PaymentBannerSlide';
 
 const CustomBannerBG = styled(Box)`
 background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
@@ -33,17 +33,20 @@ const Home = () => {
     dispatch(getFurniture());
   }, [dispatch]);
  
-
+  
   return (
     <Fragment>
       <TopNav />
       <CustomBannerBG>
         <HomeBanner />
       </CustomBannerBG>
-      <DealOfTheDay />
-      <TopOfferSlide topOffer={topOffer} />
-      <FashionSlide fashion={fashion} />
-      <FurnitureSlide furniture={furniture} />
+      <Box sx={{ display: "flex" }}></Box>
+      <TopOfferSlide topOffer={topOffer} tittle="Deal of the Day" />
+      <PaymentBannerSlide/>
+      <FashionSlide fashion={fashion} tittle="Recommended Items" />
+      <FurnitureSlide furniture={furniture} tittle="Trendy Furniture" />
+      <FashionSlide fashion={fashion} tittle="Top Rated Products" />
+      <FurnitureSlide furniture={furniture} tittle="Suggesting Furniture" />
     </Fragment>
   );
 };

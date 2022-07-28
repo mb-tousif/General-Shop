@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Typography, styled, Button } from "@mui/material";
+import { Box, Typography, Divider, Button, styled } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const FurnitureSlide = ({ furniture }) => {
+const FurnitureSlide = ({ furniture, tittle }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -29,8 +29,25 @@ const FurnitureSlide = ({ furniture }) => {
   margin-top: 10,
   background: #ffffff
   `;
+  const CustomButton = styled(Button)`
+    background: orange;
+    color: green;
+    margin-left: auto;
+    font-weight: 600;
+  `;
   return (
     <Component>
+      <Box sx={{ padding: "15px 20px", display: "flex" }}>
+        <Typography
+          sx={{ fontSize: "22px", fontWeight: 600, color: "orangeRed" }}
+        >
+          {tittle}
+        </Typography>
+        <CustomButton variant="outlined" size="medium">
+          View All
+        </CustomButton>
+      </Box>
+      <Divider />
       <Carousel
         responsive={responsive}
         swipeAble={false}

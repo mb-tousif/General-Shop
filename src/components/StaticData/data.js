@@ -45,3 +45,19 @@ export const bannerData = [
     url: "https://rukminim1.flixcart.com/flap/3376/560/image/5892f28edc54fb44.jpg?q=50",
   },
 ];
+
+// Home paymentBanner Carousal
+export const paymentBanner = [
+  {
+    id: 1,
+    url: "https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb1/1.0.0+Deploy-Release-78/Default/stores/chaldal/components/landingPage2/LandingPage/images/how_to_order_chaldal/tutorial-1.jpg?q=best&webp=1",
+  },
+  {
+    id: 2,
+    url: "https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb1/1.0.0+Deploy-Release-78/Default/stores/chaldal/components/landingPage2/LandingPage/images/how_to_order_chaldal/tutorial-2.jpg?q=best&webp=1",
+  },
+  {
+    id: 3,
+    url: "https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb1/1.0.0+Deploy-Release-78/Default/stores/chaldal/components/landingPage2/LandingPage/images/how_to_order_chaldal/tutorial-3.jpg?q=best&webp=1)",
+  },
+];
