@@ -20,14 +20,28 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
       items: 1,
     },
   };
-  const addURL = `https://rukminim1.flixcart.com/flap/400/400/image/633789f7def60050.jpg?q=70`;
+  const addURL = `https://chaldn.com/_mpimage/tang-orange-instant-drink-powder-75-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D99794&q=best&v=1&m=400&webp=1`;
 
-  const Image = styled("img")({
+  const Image = styled("img")(({ theme }) => ({
     width: "auto",
     height: 150,
     borderRadius: 10,
     margin: 10,
-  });
+    [theme.breakpoints.down("md")]: {
+      objectFit: "cover",
+      height: 100,
+    },
+  }));
+  const AddImage = styled("img")(({ theme }) => ({
+    height: 300,
+    borderRadius: 10,
+    margin: 10,
+    [theme.breakpoints.down("sm")]: {
+      objectFit: "cover",
+      height: 100,
+      margin: 4,
+    },
+  }));
   const Component = styled(Box)`
   margin-top: 10,
   background: #ffffff
@@ -66,7 +80,7 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
       <Divider />
       <Box>
         <Grid container spacing={2}>
-          <Grid item xs={10}>
+          <Grid item sm={10} xs={12}>
             <Carousel
               responsive={responsive}
               swipeAble={false}
@@ -104,8 +118,8 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
               ))}
             </Carousel>
           </Grid>
-          <Grid item xs={2}>
-            <img src={addURL} alt="Side Add" style={{width:"100%", height:"300px"}} />
+          <Grid item sm={2} xs={12}>
+            <AddImage src={addURL} width={"100%"} alt="Side Add"/>
           </Grid>
         </Grid>
       </Box>

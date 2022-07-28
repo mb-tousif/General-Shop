@@ -1,47 +1,29 @@
-import React from 'react';
-import { styled } from "@mui/material";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React, { Fragment } from 'react';
+import { Box, Grid, styled } from "@mui/material";
 import { paymentBanner } from "../StaticData/data";
 
 const PaymentBannerSlide = () => {
-    const responsive = {
-      desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 3,
-      },
-      tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2,
-      },
-      mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-      },
-    };
-
-    const Image = styled("img")({
+    const Image = styled("img")(({ theme }) => ({
       width: "100%",
       height: 280,
       borderRadius: 10,
-    });
+      [theme.breakpoints.down("md")]: {
+        objectFit: "cover",
+        height: 120,
+      },
+    }));
+    const teer = `https://chaldn.com/_mpimage?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D103692&q=best&v=1&m=700&webp=1`;
     return (
-      <Carousel
-        responsive={responsive}
-        swipeAble={false}
-        draggable={false}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={2000}
-        slidesToSlide={1}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-        containerClass="carousel-container"
-      >
-        {paymentBanner.map((data) => (
-          <Image src={data.url} alt="Banner" key={data.id} />
-        ))}
-      </Carousel>
+      <Fragment>
+        <Box container lg={12} md={12} sm={12} xs={12} display={"flex"}>
+          {paymentBanner.map((data) => (
+            <Grid lg={4} md={4} sm={12} xs={12}>
+              <img src={data.url} alt="Banner" width={"100%"} key={data.id} />
+            </Grid>
+          ))}
+        </Box>
+        <Image src={teer} alt="City group"/>
+      </Fragment>
     );
 };
 

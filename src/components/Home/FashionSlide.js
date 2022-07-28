@@ -21,6 +21,7 @@ const FashionSlide = ({ fashion, tittle }) => {
 
   const Image = styled("img")({
     width: "auto",
+    backgroundSize: "cover",
     height: 150,
     borderRadius: 10,
     margin: 10,
