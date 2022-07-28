@@ -2,11 +2,15 @@ import styled from '@emotion/styled';
 import { Box } from '@mui/material';
 import React, { Fragment, useEffect } from 'react';
 import HomeBanner from './HomeBanner';
-import { getFurniture } from "../../Redux/Action/furnitureAction.js";
-import { useDispatch, useSelector } from "react-redux";
 import TopNav from './TopNav';
+import DealOfTheDay from './DealOfTheDay';
+import { useDispatch, useSelector } from "react-redux";
 import { getTopOffer } from '../../Redux/Action/topOfferAction.js';
+import { getFashion } from "../../Redux/Action/fashionAction.js";
+import { getFurniture } from "../../Redux/Action/furnitureAction.js";
+import FashionSlide from './FashionSlide';
 import FurnitureSlide from './FurnitureSlide';
+import TopOfferSlide from './TopOfferSlide';
 
 const CustomBannerBG = styled(Box)`
 background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
@@ -18,17 +22,17 @@ const Home = () => {
   // const {products}  = getProducts;
   const {furniture }= useSelector((state) => state.getFurniture);
   const {topOffer} = useSelector((state) => state.getTopOffer);
-  console.log(furniture);
-  console.log(topOffer);
+  const {fashion} = useSelector((state) => state.getFashion);
+  // console.log(furniture);
+  // console.log(topOffer);
+  // console.log(fashion);
   const dispatch = useDispatch();
   useEffect(() => {
-    // dispatch(getFurniture());
+    dispatch(getFashion());
     dispatch(getTopOffer());
-  }, [dispatch]);
-  useEffect(() => {
     dispatch(getFurniture());
-    // dispatch(getTopOffer());
   }, [dispatch]);
+ 
 
   return (
     <Fragment>
@@ -36,6 +40,9 @@ const Home = () => {
       <CustomBannerBG>
         <HomeBanner />
       </CustomBannerBG>
+      <DealOfTheDay />
+      <TopOfferSlide topOffer={topOffer} />
+      <FashionSlide fashion={fashion} />
       <FurnitureSlide furniture={furniture} />
     </Fragment>
   );

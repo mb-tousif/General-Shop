@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import { Box, Typography, styled, Button } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const FurnitureSlide = ({ furniture }) => {
+const FashionSlide = ({fashion}) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -23,7 +23,7 @@ const FurnitureSlide = ({ furniture }) => {
     width: "auto",
     height: 150,
     borderRadius: 10,
-    margin: 10
+    margin: 10,
   });
   const Component = styled(Box)`
   margin-top: 10,
@@ -45,7 +45,7 @@ const FurnitureSlide = ({ furniture }) => {
         containerClass="carousel-container"
         centerMode={true}
       >
-        {furniture.map((data) => (
+        {fashion.map((data) => (
           <Box textAlign="center" style={{ padding: "15px 20px" }}>
             <Image src={data.url} alt="Banner" key={data.id} />
             <Typography
@@ -71,4 +71,4 @@ const FurnitureSlide = ({ furniture }) => {
   );
 };
 
-export default FurnitureSlide;
+export default FashionSlide;

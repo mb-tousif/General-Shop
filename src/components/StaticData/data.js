@@ -25,6 +25,10 @@ export const bannerData = [
     url: "https://rukminim1.flixcart.com/flap/3376/560/image/d117a62eb5fbb8e1.jpg?q=50",
   },
   {
+    id: 43,
+    url: "https://rukminim1.flixcart.com/flap/3376/560/image/af44b8a0d3455914.jpeg?q=50",
+  },
+  {
     id: 2,
     url: "https://rukminim1.flixcart.com/flap/3376/560/image/57267a180af306fe.jpg?q=50",
   },
@@ -35,5 +39,9 @@ export const bannerData = [
   {
     id: 4,
     url: "https://rukminim1.flixcart.com/flap/3376/560/image/01daca13c6b6b221.jpg?q=50",
+  },
+  {
+    id: 34,
+    url: "https://rukminim1.flixcart.com/flap/3376/560/image/5892f28edc54fb44.jpg?q=50",
   },
 ];
