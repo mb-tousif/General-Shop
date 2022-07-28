@@ -3,6 +3,7 @@
 import { GET_FURNITURE_FAIL, GET_FURNITURE_SUCCESS } from "../Action/furnitureAction";
 
 //*Pure functions are functions that do not have any side effects and will return the same results if the same arguments are passed in.
+
 // (state=default/initial value,action)
 export const getFurnitureReducer = (state = { furniture: [] }, action) => {
   switch (action.type) {
