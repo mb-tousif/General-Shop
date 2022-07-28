@@ -3,7 +3,7 @@ export const GET_FURNITURE_SUCCESS = "getFurnitureSuccess";
 export const GET_FURNITURE_FAIL = "getFurnitureFail";
 //* An action, is an object that contains the payload of information. They are the only source of information for the Redux store to be updated. Reducers update store based on the value of the action.type
 
-const URL = "http://localhost:4000/furnitures";
+const URL = "https://fathomless-brushlands-54478.herokuapp.com/furnitures";
 
 export const getFurniture = () => async (dispatch) => {
   //* action can also be used for api calls,

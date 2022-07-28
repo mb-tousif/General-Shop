@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:4000";
+const url = "https://fathomless-brushlands-54478.herokuapp.com";
 
 export const authenticateLogin = async (data) => {
   try {
