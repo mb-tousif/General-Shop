@@ -7,7 +7,7 @@ import { bannerData } from "../StaticData/data";
 const HomeBanner = () => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 2024, min: 1024 },
+      breakpoint: { max: 3000, min: 1024 },
       items: 1,
     },
     tablet: {
@@ -15,7 +15,7 @@ const HomeBanner = () => {
       items: 1,
     },
     mobile: {
-      breakpoint: { max: 464, min: 1 },
+      breakpoint: { max: 464, min: 0 },
       items: 1,
     },
   };

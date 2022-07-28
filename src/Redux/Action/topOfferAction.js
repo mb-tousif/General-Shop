@@ -9,7 +9,7 @@ export const getTopOffer = () => async (dispatch) => {
   //* action can also be used for api calls,
   try {
     const { data } = await axios.get(URL);
-    //    console.log(res)
+      //  console.log(data)
     //    dispatch fn internally calls reducer
     //* we dispatch values in useReducer hook
     dispatch({

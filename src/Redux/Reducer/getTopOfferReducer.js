@@ -10,7 +10,6 @@ export const getTopOfferReducer = (state = { topOffer: [] }, action) => {
       return { topOffer: action.payload };
     case GET_TOP_OFFER_FAIL:
       return { error: action.payload };
-
     default:
       return state;
   }

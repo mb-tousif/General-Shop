@@ -56,8 +56,8 @@ const LoginModal = ({ open, setOpen}) => {
   };
 
   const loginUser = async () => {
-    let response = await authenticateLogin(login);
-    if (!response) showError(true);
+    let res = await authenticateLogin(login);
+    if (!res) showError(true);
     else {
       showError(false);
       handleClose();
