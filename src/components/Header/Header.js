@@ -5,6 +5,7 @@ import logo from "../../Assets/images/logoText.png";
 import Search from "./Search";
 import styled from "@emotion/styled";
 import CustomNavLink from "./CustomNavLink";
+import { Link } from "react-router-dom";
 const Header = () => {
 
   const CustomizedAppBar = styled(AppBar)`
@@ -24,21 +25,25 @@ const Header = () => {
   `
   return (
     <CustomizedAppBar>
-      <Toolbar style={{minHeight: 55}}>
+      <Toolbar style={{ minHeight: 55 }}>
         <Component>
-          <img src={logo} alt="Logo" style={{ width: 120 }} />
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <img src={logo} alt="Logo" style={{ width: 120 }} />
+          </Link>
           <Box>
             <CustomsText>
               Family Shop&nbsp;
               <Box component={"span"} style={{ color: "orange" }}>
                 Plus
               </Box>
-              <InsightsIcon style={{ color: "green", fontSize: 10, marginLeft: 4}} />
+              <InsightsIcon
+                style={{ color: "green", fontSize: 10, marginLeft: 4 }}
+              />
             </CustomsText>
           </Box>
         </Component>
-        <Search/>
-        <CustomNavLink/>
+        <Search />
+        <CustomNavLink />
       </Toolbar>
     </CustomizedAppBar>
   );

@@ -33,7 +33,7 @@ export const getFurniture = () => async (dispatch) => {
 export const getFashionDetail = (id) => async (dispatch) => {
   try {
     dispatch({type: GET_FURNITURE_DETAIL_REQUEST})
-    const {data} = await axios.get(`${URL}/:${id}`)
+    const {data} = await axios.get(`${URL}/${id}`)
     dispatch({type: GET_FURNITURE_DETAIL_SUCCESS, payload: data})
   } catch (error) {
     dispatch({type: GET_FURNITURE_DETAIL_FAIL, payload: error.message})

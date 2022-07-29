@@ -29,7 +29,7 @@ export const getTopOffer = () => async (dispatch) => {
 export const getTopOfferDetail = (id) => async(dispatch) => {
   try {
     dispatch({type: GET_TOP_OFFER_DETAIL_REQUEST})
-    const {data} = await axios.get(`${URL}/:${id}`)
+    const {data} = await axios.get(`${URL}/${id}`)
     dispatch({type: GET_TOP_OFFER_DETAIL_SUCCESS, payload: data})
   } catch (error) {
     dispatch({type: GET_TOP_OFFER_DETAIL_FAIL, payload: error.message})

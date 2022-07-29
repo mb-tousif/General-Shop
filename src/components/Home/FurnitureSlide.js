@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Divider, Button, styled } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
 
 const FurnitureSlide = ({ furniture, tittle }) => {
   const responsive = {
@@ -64,7 +65,9 @@ const FurnitureSlide = ({ furniture, tittle }) => {
       >
         {furniture.map((data) => (
           <Box textAlign="center" style={{ padding: "15px 20px" }}>
-            <Image src={data.url} alt="Banner" key={data.id} />
+            <Link to={`furniture/${data._id}`}>
+              <Image src={data.url} alt="Banner" key={data.id} />
+            </Link>
             <Typography
               style={{ color: "#8d0b93", marginTop: 5, fontSize: 14 }}
             >

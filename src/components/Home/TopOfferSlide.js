@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import HistoryToggleOffIcon from "@mui/icons-material/HistoryToggleOff";
 import Countdown from "react-countdown";
+import { Link } from 'react-router-dom';
 
 const TopOfferSlide = ({ topOffer, tittle }) => {
   const responsive = {
@@ -97,7 +98,9 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
             >
               {topOffer.map((data) => (
                 <Box textAlign="center" style={{ padding: "15px 20px" }}>
-                  <Image src={data.url} alt="Banner" key={data.id} />
+                  <Link to={`topOffer/${data._id}`}>
+                    <Image src={data.url} alt="Banner" key={data.id} />
+                  </Link>
                   <Typography
                     style={{ color: "#8d0b93", marginTop: 5, fontSize: 14 }}
                   >
@@ -119,7 +122,7 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
             </Carousel>
           </Grid>
           <Grid item sm={2} xs={12}>
-            <AddImage src={addURL} width={"100%"} alt="Side Add"/>
+            <AddImage src={addURL} width={"100%"} alt="Side Add" />
           </Grid>
         </Grid>
       </Box>
