@@ -6,10 +6,11 @@ import { getFashionDetail } from '../../Redux/Action/fashionAction';
 const FashionDetail = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
-    const {loading, fashion} = useSelector(state=> state.getFashionDetail)
+    const {fashion} = useSelector(state=> state.getFashionDetail)
     useEffect(()=>{
-        dispatch(getFashionDetail)
-    }, [dispatch, id, loading, fashion]);
+        dispatch(getFashionDetail(id))
+    }, [dispatch, id, fashion]);
+    console.log(fashion);
     return (
         <div>
             <h1>Help</h1>
