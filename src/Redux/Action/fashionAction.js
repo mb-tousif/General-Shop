@@ -5,6 +5,10 @@ import axios from "axios";
 //Action Type
 export const GET_FASHION_SUCCESS = "getFashionSuccess"
 export const GET_FASHION_FAIL = "getFashionFail";
+export const GET_FASHION_DETAIL_REQUEST = "getFashionDetailRequest";
+export const GET_FASHION_DETAIL_SUCCESS = "getFashionDetailSuccess";
+export const GET_FASHION_DETAIL_FAIL = "getFashionDetailFail";
+export const GET_FASHION_DETAIL_RESET = "getFashionDetailReset";
 
 // Data API URL
 const URL = "https://fathomless-brushlands-54478.herokuapp.com/fashion";
@@ -26,6 +30,16 @@ export const getFashion = () => async (dispatch) =>{
         type: GET_FASHION_FAIL,
         payload: error.message
     });
+  }
+}
+
+export const getFashionDetail = (id) => async (dispatch) => {
+  try {
+    dispatch({ type: GET_FASHION_DETAIL_REQUEST });
+    const {data} = await axios.get(`${URL}/:${id}`)
+    dispatch({ type: GET_FASHION_DETAIL_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: GET_FASHION_DETAIL_FAIL, payload: error.message });
   }
 }
 

@@ -1,6 +1,10 @@
 import axios from "axios";
 export const GET_TOP_OFFER_SUCCESS = "getTopOfferSuccess";
 export const GET_TOP_OFFER_FAIL = "getTopOfferFail";
+export const GET_TOP_OFFER_DETAIL_REQUEST = "getTopOfferDetailRequest";
+export const GET_TOP_OFFER_DETAIL_SUCCESS = "getTopOfferDetailSuccess";
+export const GET_TOP_OFFER_DETAIL_FAIL = "getTopOfferDetailFail";
+export const GET_TOP_OFFER_DETAIL_RESET = "getTopOfferDetailReset";
 //* An action, is an object that contains the payload of information. They are the only source of information for the Redux store to be updated. Reducers update store based on the value of the action.type
 
 const URL = "https://fathomless-brushlands-54478.herokuapp.com/topOffers";
@@ -21,6 +25,16 @@ export const getTopOffer = () => async (dispatch) => {
     dispatch({ type: GET_TOP_OFFER_FAIL, payload: error.message });
   }
 };
+
+export const getTopOfferDetail = (id) => async(dispatch) => {
+  try {
+    dispatch({type: GET_TOP_OFFER_DETAIL_REQUEST})
+    const {data} = await axios.get(`${URL}/:${id}`)
+    dispatch({type: GET_TOP_OFFER_DETAIL_SUCCESS, payload: data})
+  } catch (error) {
+    dispatch({type: GET_TOP_OFFER_DETAIL_FAIL, payload: error.message})
+  }
+}
 /**
  * obj={
  * data:

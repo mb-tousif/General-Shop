@@ -1,8 +1,8 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import { getFashionReducer } from "../Reducer/getFashionReducer";
-import { getFurnitureReducer } from "../Reducer/getFurnitureReducer";
+import { getFashionDetailReducer, getFashionReducer } from "../Reducer/getFashionReducer";
+import { getFurnitureDetailReducer, getFurnitureReducer } from "../Reducer/getFurnitureReducer";
 import { getTopOfferReducer } from "../Reducer/getTopOfferReducer";
 
 //* multiple reducer have to get combined with combineReducer fn
@@ -11,6 +11,9 @@ const reducer = combineReducers({
   getFurniture: getFurnitureReducer,
   getTopOffer: getTopOfferReducer,
   getFashion : getFashionReducer,
+  getFurnitureDetail: getFurnitureDetailReducer,
+  getTopOfferDetail: getFurnitureDetailReducer,
+  getFashionDetail: getFashionDetailReducer
 });
 
 const middleware = [thunk];
