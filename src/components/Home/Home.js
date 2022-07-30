@@ -11,6 +11,7 @@ import FashionSlide from './FashionSlide';
 import FurnitureSlide from './FurnitureSlide';
 import TopOfferSlide from './TopOfferSlide';
 import PaymentBannerSlide from './PaymentBannerSlide';
+import Advertisement from './Advertisement';
 
 const CustomBannerBG = styled(Box)`
 background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
@@ -45,6 +46,7 @@ const Home = () => {
       <PaymentBannerSlide/>
       <FashionSlide fashion={fashion} tittle="Recommended Items" />
       <FurnitureSlide furniture={furniture} tittle="Trendy Furniture" />
+      <Advertisement/>
       <FashionSlide fashion={fashion} tittle="Top Rated Products" />
       <FurnitureSlide furniture={furniture} tittle="Suggesting Furniture" />
     </Fragment>

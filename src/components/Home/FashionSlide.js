@@ -28,7 +28,8 @@ const FashionSlide = ({ fashion, tittle }) => {
     margin: 10,
   });
   const Component = styled(Box)`
-  margin-top: 10,
+  padding: 10px,
+  borderRadius: 10,
   background: #ffffff
   `;
   const CustomButton = styled(Button)`

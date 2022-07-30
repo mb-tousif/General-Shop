@@ -17,11 +17,11 @@ export const bannerData = [
     url: "https://rukminim1.flixcart.com/flap/3376/560/image/6549654b7720f105.jpg?q=50",
   },
   {
-    id: 1,
-    url: "https://rukminim1.flixcart.com/flap/3376/560/image/704c4f789678af37.jpg?q=50",
+    id: "infin",
+    url: "https://rukminim1.flixcart.com/flap/3376/560/image/2db8d7747c90a2a1.jpeg?q=50",
   },
   {
-    id: 1,
+    id: "ac",
     url: "https://rukminim1.flixcart.com/flap/3376/560/image/d117a62eb5fbb8e1.jpg?q=50",
   },
   {
@@ -45,6 +45,8 @@ export const bannerData = [
     url: "https://rukminim1.flixcart.com/flap/3376/560/image/5892f28edc54fb44.jpg?q=50",
   },
 ];
+
+// https://rukminim1.flixcart.com/fk-p-flap/3376/560/image/351ade425a21d0f7.jpg?q=50
 
 // Home paymentBanner Carousal
 export const paymentBanner = [

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Box, Typography, Divider, Button, styled, Grid  } from "@mui/material";
+import React from "react";
+import { Box, Typography, Divider, Button, styled} from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import HistoryToggleOffIcon from "@mui/icons-material/HistoryToggleOff";
 import Countdown from "react-countdown";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const TopOfferSlide = ({ topOffer, tittle }) => {
   const responsive = {
@@ -21,7 +21,6 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
       items: 1,
     },
   };
-  const addURL = `https://chaldn.com/_mpimage/tang-orange-instant-drink-powder-75-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D99794&q=best&v=1&m=400&webp=1`;
 
   const Image = styled("img")(({ theme }) => ({
     width: "auto",
@@ -31,16 +30,6 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
     [theme.breakpoints.down("md")]: {
       objectFit: "cover",
       height: 100,
-    },
-  }));
-  const AddImage = styled("img")(({ theme }) => ({
-    height: 300,
-    borderRadius: 10,
-    margin: 10,
-    [theme.breakpoints.down("sm")]: {
-      objectFit: "cover",
-      height: 100,
-      margin: 4,
     },
   }));
   const Component = styled(Box)`
@@ -79,53 +68,44 @@ const TopOfferSlide = ({ topOffer, tittle }) => {
         </CustomButton>
       </Box>
       <Divider />
-      <Box>
-        <Grid container spacing={2}>
-          <Grid item sm={10} xs={12}>
-            <Carousel
-              responsive={responsive}
-              swipeAble={false}
-              draggable={false}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={2000}
-              keyBoardControl={true}
-              showDots={false}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-              containerClass="carousel-container"
-              centerMode={true}
+      <Carousel
+        responsive={responsive}
+        swipeAble={false}
+        draggable={false}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={2000}
+        keyBoardControl={true}
+        showDots={false}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+        containerClass="carousel-container"
+        centerMode={true}
+      >
+        {topOffer.map((data) => (
+          <Box textAlign="center" style={{ padding: "15px 20px" }}>
+            <Link to={`topOffer/${data._id}`}>
+              <Image src={data.url} alt="Banner" key={data.id} />
+            </Link>
+            <Typography
+              style={{ color: "#8d0b93", marginTop: 5, fontSize: 14 }}
             >
-              {topOffer.map((data) => (
-                <Box textAlign="center" style={{ padding: "15px 20px" }}>
-                  <Link to={`topOffer/${data._id}`}>
-                    <Image src={data.url} alt="Banner" key={data.id} />
-                  </Link>
-                  <Typography
-                    style={{ color: "#8d0b93", marginTop: 5, fontSize: 14 }}
-                  >
-                    {data.title.shortTitle}
-                  </Typography>
-                  <Typography
-                    style={{ color: "#ff057c", marginTop: 5, fontSize: 12 }}
-                  >
-                    {data.discount}
-                  </Typography>
-                  <Button
-                    style={{ color: "green", marginTop: 5, opacity: 0.6 }}
-                    size="small"
-                  >
-                    {data.tagline}
-                  </Button>
-                </Box>
-              ))}
-            </Carousel>
-          </Grid>
-          <Grid item sm={2} xs={12}>
-            <AddImage src={addURL} width={"100%"} alt="Side Add" />
-          </Grid>
-        </Grid>
-      </Box>
+              {data.title.shortTitle}
+            </Typography>
+            <Typography
+              style={{ color: "#ff057c", marginTop: 5, fontSize: 12 }}
+            >
+              {data.discount}
+            </Typography>
+            <Button
+              style={{ color: "green", marginTop: 5, opacity: 0.6 }}
+              size="small"
+            >
+              {data.tagline}
+            </Button>
+          </Box>
+        ))}
+      </Carousel>
     </Component>
   );
 };
