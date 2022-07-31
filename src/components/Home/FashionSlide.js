@@ -67,25 +67,37 @@ const FashionSlide = ({ fashion, tittle }) => {
       >
         {fashion.map((data) => (
           <Box textAlign="center" style={{ padding: "15px 20px" }}>
-            <Link to={`fashion/${data._id}`}>
+            <Link to={`fashion/${data._id}`} style={{ textDecoration: "none" }}>
               <Image src={data.url} alt="Banner" key={data.id} />
+              <Typography
+                style={{
+                  color: "#8d0b93",
+                  marginTop: 5,
+                  fontSize: 14,
+                }}
+              >
+                {data.title.shortTitle}
+              </Typography>
+              <Typography
+                style={{
+                  color: "#ff057c",
+                  marginTop: 5,
+                  fontSize: 12,
+                }}
+              >
+                {data.discount}
+              </Typography>
+              <Button
+                style={{
+                  color: "green",
+                  marginTop: 5,
+                  opacity: 0.6,
+                }}
+                size="small"
+              >
+                {data.tagline}
+              </Button>
             </Link>
-            <Typography
-              style={{ color: "#8d0b93", marginTop: 5, fontSize: 14 }}
-            >
-              {data.title.shortTitle}
-            </Typography>
-            <Typography
-              style={{ color: "#ff057c", marginTop: 5, fontSize: 12 }}
-            >
-              {data.discount}
-            </Typography>
-            <Button
-              style={{ color: "green", marginTop: 5, opacity: 0.6 }}
-              size="small"
-            >
-              {data.tagline}
-            </Button>
           </Box>
         ))}
       </Carousel>

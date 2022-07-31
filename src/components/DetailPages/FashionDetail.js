@@ -13,6 +13,7 @@ const Component = styled(Box)`
 const Container = styled(Grid)`
   background: #fff;
   display: flex;
+  flex: around;
 `;
 const RightContainer = styled(Grid)`
   margin-top: 50px;
@@ -29,7 +30,7 @@ const FashionDetail = () => {
   const { fashion } = useSelector((state) => state.getFashionDetail);
   //* The useDispatch hook is used to dispatch an action while useSelector hook is used to get the state from the redux store.
   useEffect(() => {
-    if (fashion && id !== fashion.id) {
+    if (fashion && id !== fashion._id) {
       dispatch(getFashionDetail(id));
     }
   }, [dispatch,id,fashion]);

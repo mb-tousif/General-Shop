@@ -27,7 +27,7 @@ export const getFashionDetailReducer =(state={fashion:{}}, action) => {
         case GET_FASHION_DETAIL_FAIL:
             return { loading: false, error: action.payload}
         case GET_FASHION_DETAIL_RESET:
-                    return { loading: false, fashion: {}}
+            return { loading: false, fashion: {}}
         default:
             return state;
     }

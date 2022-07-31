@@ -1,9 +1,8 @@
-import { Box, Grid} from "@mui/material";
-import { styled } from "@mui/system";
+import { Box, Grid, styled } from "@mui/material";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getTopOfferDetail } from "../../Redux/Action/topOfferAction";
+import {getTopOfferDetail} from '../../Redux/Action/topOfferAction'
 import ActionTopOffer from "./ActionTopOffer";
 import TopOfferDescription from "./TopOfferDescription";
 const Component = styled(Box)`
@@ -26,10 +25,11 @@ const RightContainer = styled(Grid)`
 const TopOfferDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const { topOffer } = useSelector((state) => state.getTopOfferDetail);
+  const {topOffer} = useSelector((state) => state.getTopOfferDetail)
   //* The useDispatch hook is used to dispatch an action while useSelector hook is used to get the state from the redux store.
+  console.log(topOffer);
   useEffect(() => {
-    if (topOffer && id !== topOffer.id) {
+    if (topOffer && id !== topOffer._id) {
       dispatch(getTopOfferDetail(id));
     }
   }, [dispatch, id, topOffer]);

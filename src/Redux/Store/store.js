@@ -3,7 +3,10 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { getFashionDetailReducer, getFashionReducer } from "../Reducer/getFashionReducer";
 import { getFurnitureDetailReducer, getFurnitureReducer } from "../Reducer/getFurnitureReducer";
-import { getTopOfferReducer } from "../Reducer/getTopOfferReducer";
+import {
+  getTopOfferReducer,
+  getTopOfferDetailReducer,
+} from "../Reducer/getTopOfferReducer";
 
 //* multiple reducer have to get combined with combineReducer fn
 //* combineReducer takes an obj, inside that obj we pass multiple reducers
@@ -12,7 +15,7 @@ const reducer = combineReducers({
   getTopOffer: getTopOfferReducer,
   getFashion : getFashionReducer,
   getFurnitureDetail: getFurnitureDetailReducer,
-  getTopOfferDetail: getFurnitureDetailReducer,
+  getTopOfferDetail: getTopOfferDetailReducer,
   getFashionDetail: getFashionDetailReducer
 });
 

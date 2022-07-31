@@ -28,6 +28,7 @@ export const getTopOffer = () => async (dispatch) => {
 
 export const getTopOfferDetail = (id) => async(dispatch) => {
   try {
+    // console.log( id);
     dispatch({type: GET_TOP_OFFER_DETAIL_REQUEST})
     const { data } = await axios.get(`${URL}/topOffer/${id}`);
     dispatch({type: GET_TOP_OFFER_DETAIL_SUCCESS, payload: data})

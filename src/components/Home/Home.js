@@ -42,12 +42,28 @@ const Home = () => {
         <HomeBanner />
       </CustomBannerBG>
       <Box sx={{ display: "flex" }}></Box>
-      <TopOfferSlide topOffer={topOffer} tittle="Deal of the Day" />
-      <PaymentBannerSlide/>
-      <FashionSlide fashion={fashion} tittle="Recommended Items" />
-      <FurnitureSlide furniture={furniture} tittle="Trendy Furniture" />
-      <Advertisement/>
-      <FashionSlide fashion={fashion} tittle="Top Rated Products" />
+      <TopOfferSlide
+        topOffer={topOffer}
+        key={topOffer._id}
+        tittle="Deal of the Day"
+      />
+      <PaymentBannerSlide />
+      <FashionSlide
+        fashion={fashion}
+        key={fashion._id}
+        tittle="Recommended Items"
+      />
+      <FurnitureSlide
+        furniture={furniture}
+        key={fashion._id}
+        tittle="Trendy Furniture"
+      />
+      <Advertisement />
+      <FashionSlide
+        fashion={fashion}
+        key={fashion._id}
+        tittle="Top Rated Products"
+      />
       <FurnitureSlide furniture={furniture} tittle="Suggesting Furniture" />
     </Fragment>
   );

@@ -4,9 +4,11 @@ import { ShoppingCart as Cart, FlashOn as Flash } from "@mui/icons-material";
 const LeftContainer = styled(Box)`
   min-width: 40%;
   padding: 40px 0 0 80px;
+  overflow: hidden;
 `;
 const Image = styled("img")({
   padding: "15px",
+  width: "80%",
 });
 
 const StyledButton = styled(Button)`

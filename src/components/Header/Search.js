@@ -3,8 +3,8 @@ import { InputBase, Box, styled, List, ListItem } from "@mui/material";
 import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 import { useSelector, useDispatch } from "react-redux";
 import { getFashion} from "../../Redux/Action/fashionAction";
-import { getFurniture } from "../../Redux/Action/furnitureAction";
-import { getTopOffer} from "../../Redux/Action/topOfferAction";
+// import { getFurniture } from "../../Redux/Action/furnitureAction";
+// import { getTopOffer} from "../../Redux/Action/topOfferAction";
 import { Link } from "react-router-dom";
 const SearchContainer = styled(Box)`
   background: #fff;
@@ -34,18 +34,17 @@ const ListWrapper = styled(List)`
 const Search = () => {
   const [text, setText] = useState("");
   const { fashion } = useSelector((state) => state.getFashion);
-  const { furniture } = useSelector((state) => state.getFurniture);
-  const { topOffer } = useSelector((state) => state.getTopOffer);
+  // const { furniture } = useSelector((state) => state.getFurniture);
+  // const { topOffer } = useSelector((state) => state.getTopOffer);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getFashion());
-    dispatch(getFurniture());
-    dispatch(getTopOffer());
+    // dispatch(getFurniture());
+    // dispatch(getTopOffer());
   }, [dispatch]);
   const getText = (text) => {
     setText(text);
   };
-
   return (
     <SearchContainer>
       <InputSearchBase
@@ -58,14 +57,13 @@ const Search = () => {
       </SearchIconWrapper>
       {text && (
         <ListWrapper>
-          {fashion || furniture || topOffer
-            .filter((pd) =>
-              pd.title.longTitle.toLowerCase().includes(text.toLowerCase())
+          {fashion
+          .filter((pd) =>pd.title.shortTitle.toLowerCase().includes(text.toLowerCase())
             )
             .map((pd) => (
               <ListItem>
                 <Link
-                  to={`/${fashion||furniture||topOffer}/${pd._id}`}
+                  to={`fashion/${pd._id}`}
                   onClick={() => setText("")}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >

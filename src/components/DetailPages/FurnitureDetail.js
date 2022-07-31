@@ -1,5 +1,4 @@
-import { Box, Grid} from "@mui/material";
-import { styled } from "@mui/system";
+import { Box, Grid, styled } from "@mui/material";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -29,7 +28,7 @@ const FurnitureDetail = () => {
   const { furniture } = useSelector((state) => state.getFurnitureDetail);
   //* The useDispatch hook is used to dispatch an action while useSelector hook is used to get the state from the redux store.
   useEffect(() => {
-    if (furniture && id !== furniture.id) {
+    if (furniture && id !== furniture._id) {
       dispatch(getFurnitureDetail(id));
     }
   }, [dispatch, id, furniture]);
