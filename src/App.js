@@ -7,6 +7,7 @@ import DataProvider from './ContextApi/DataProvider';
 import FashionDetail from './components/DetailPages/FashionDetail';
 import FurnitureDetail from './components/DetailPages/FurnitureDetail';
 import TopOfferDetail from './components/DetailPages/TopOfferDetail';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/fashion/:id" element={<FashionDetail/>} />
           <Route path="/furniture/:id" element={<FurnitureDetail/>} />
           <Route path="/topOffer/:id" element={<TopOfferDetail/>} />
+          <Route path="/cart" element={<Cart/>} />
         </Routes>
       </Box>
     </DataProvider>

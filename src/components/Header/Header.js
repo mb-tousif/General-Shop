@@ -6,8 +6,8 @@ import Search from "./Search";
 import styled from "@emotion/styled";
 import CustomNavLink from "./CustomNavLink";
 import { Link } from "react-router-dom";
-const Header = () => {
 
+const Header = () => {
   const CustomizedAppBar = styled(AppBar)`
     background: linear-gradient(225deg, #ff057c 30%, #8d0b93 50%, #321575 100%);
     height: 55px;

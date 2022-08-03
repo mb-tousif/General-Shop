@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
+import { getFashionCartReducer, getFurnitureCartReducer, getTopOfferCartReducer } from "../Reducer/getCartReducer";
 import { getFashionDetailReducer, getFashionReducer } from "../Reducer/getFashionReducer";
 import { getFurnitureDetailReducer, getFurnitureReducer } from "../Reducer/getFurnitureReducer";
 import {
@@ -13,10 +14,16 @@ import {
 const reducer = combineReducers({
   getFurniture: getFurnitureReducer,
   getTopOffer: getTopOfferReducer,
-  getFashion : getFashionReducer,
+  getFashion: getFashionReducer,
+  // single product store
   getFurnitureDetail: getFurnitureDetailReducer,
   getTopOfferDetail: getTopOfferDetailReducer,
-  getFashionDetail: getFashionDetailReducer
+  getFashionDetail: getFashionDetailReducer,
+  // cart store
+  addToCartFashion: getFashionCartReducer,
+  addToCartFurniture: getFurnitureCartReducer,
+  addToCartTopOffer: getTopOfferCartReducer,
+  
 });
 
 const middleware = [thunk];

@@ -27,7 +27,7 @@ const TopOfferDetail = () => {
   const { id } = useParams();
   const {topOffer} = useSelector((state) => state.getTopOfferDetail)
   //* The useDispatch hook is used to dispatch an action while useSelector hook is used to get the state from the redux store.
-  console.log(topOffer);
+  // console.log(topOffer);
   useEffect(() => {
     if (topOffer && id !== topOffer._id) {
       dispatch(getTopOfferDetail(id));
