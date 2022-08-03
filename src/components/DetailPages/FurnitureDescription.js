@@ -45,10 +45,10 @@ const FurnitureDescription = ({furniture}) => {
       </Typography>
       <Typography style={{ display: "flex", alignItems: "center" }}>
         <Box component="span" style={{ fontSize: 28 }}>
-          ₹{furniture.price.cost} &nbsp;&nbsp;&nbsp;
+          &#2547;{furniture.price.cost} &nbsp;&nbsp;&nbsp;
         </Box>
         <Box component="span" style={{ color: "#878787" }}>
-          <strike>₹{furniture.price.mrp}</strike>
+          <strike>&#2547;{furniture.price.mrp}</strike>
         </Box>
         &nbsp;&nbsp;&nbsp;
         <Box component="span" style={{ color: "green" }}>
@@ -58,7 +58,7 @@ const FurnitureDescription = ({furniture}) => {
       <SmallText>
         <Typography style={{ display: "flex", alignItems: "center" }}>
           <StyledBadge />
-          Get extra 20% off upto $50 on 1 item(s)
+          Get extra 20% off upto &#2547;50 on 1 item(s)
         </Typography>
         <Typography style={{ display: "flex", alignItems: "center" }}>
           <StyledBadge />
@@ -78,7 +78,7 @@ const FurnitureDescription = ({furniture}) => {
           <ColumnText>
             <TableCell style={{ color: "#878787" }}>Delivery</TableCell>
             <TableCell style={{ fontWeight: 600 }}>
-              Delivery by {date.toDateString()} | ₹40
+              Delivery by {date.toDateString()} | &#2547;40
             </TableCell>
           </ColumnText>
           <ColumnText>
@@ -90,12 +90,14 @@ const FurnitureDescription = ({furniture}) => {
             <TableCell>
               <span style={{ color: "#2874f0" }}>SuperComNet</span>
               <Typography>GST invoice available</Typography>
-              <Typography>View more sellers starting from ₹329</Typography>
+              <Typography>
+                View more sellers starting from &#2547;329
+              </Typography>
             </TableCell>
           </ColumnText>
           <TableRow>
             <TableCell colSpan={2}>
-              <img src={adURL} style={{ width: 390 }} alt="" />
+              <img src={adURL} style={{ width: 390 }} alt="Certified" />
             </TableCell>
           </TableRow>
           <ColumnText>

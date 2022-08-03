@@ -38,16 +38,16 @@ const FashionDescription = ({ fashion }) => {
           <img
             src={Assured}
             style={{ width: "77px", marginLeft: "20px" }}
-            alt=""
+            alt="Certified"
           />
         </Box>
       </Typography>
       <Typography style={{ display: "flex", alignItems: "center" }}>
         <Box component="span" style={{ fontSize: 28 }}>
-          ₹{fashion.price.cost} &nbsp;&nbsp;&nbsp;
+          &#2547;{fashion.price.cost} &nbsp;&nbsp;&nbsp;
         </Box>
         <Box component="span" style={{ color: "#878787" }}>
-          <strike>₹{fashion.price.mrp}</strike>
+          <strike>&#2547;{fashion.price.mrp}</strike>
         </Box>
         &nbsp;&nbsp;&nbsp;
         <Box component="span" style={{ color: "green" }}>
@@ -57,7 +57,7 @@ const FashionDescription = ({ fashion }) => {
       <SmallText>
         <Typography style={{ display: "flex", alignItems: "center" }}>
           <StyledBadge />
-          Get extra 20% off upto $50 on 1 item(s)
+          Get extra 20% off upto &#2547;50 on 1 item(s)
         </Typography>
         <Typography style={{ display: "flex", alignItems: "center" }}>
           <StyledBadge />
@@ -77,7 +77,7 @@ const FashionDescription = ({ fashion }) => {
           <ColumnText>
             <TableCell style={{ color: "#878787" }}>Delivery</TableCell>
             <TableCell style={{ fontWeight: 600 }}>
-              Delivery by {date.toDateString()} | ₹40
+              Delivery by {date.toDateString()} | &#2547;40
             </TableCell>
           </ColumnText>
           <ColumnText>
@@ -89,7 +89,9 @@ const FashionDescription = ({ fashion }) => {
             <TableCell>
               <span style={{ color: "#2874f0" }}>SuperComNet</span>
               <Typography>GST invoice available</Typography>
-              <Typography>View more sellers starting from ₹329</Typography>
+              <Typography>
+                View more sellers starting from &#2547;329
+              </Typography>
             </TableCell>
           </ColumnText>
           <TableRow>
