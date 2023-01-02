@@ -43,11 +43,11 @@ const FashionDetail = () => {
             <ActionFashion fashion={fashion} />
           </Grid>
           <RightContainer item lg={8} md={8} sm={8} xs={12}>
-            <FashionDescription fashion={fashion} />
+            <FashionDescription margin="10px" fashion={fashion} key={fashion._id} />
           </RightContainer>
         </Container>
       )}
-    </Component>
+    </Component> 
   );
 };;
 

@@ -12,7 +12,7 @@ export const ADD_TO_CART_TOP_OFFER_ERROR = "addToCartTopOfferError";
 export const DELETE_CART_TOP_OFFER = "deleteCartTopOffer";
 export const RESET_CART_TOP_OFFER = "resetCartTopOffer";
 
-const URL = "https://fathomless-brushlands-54478.herokuapp.com";
+const URL = "https://general-shop-server-code.vercel.app";
 
 
 export const addToCartFashion = (id, quantity) => async(dispatch)=> {

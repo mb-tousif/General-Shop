@@ -11,7 +11,7 @@ export const GET_FASHION_DETAIL_FAIL = "getFashionDetailFail";
 export const GET_FASHION_DETAIL_RESET = "getFashionDetailReset";
 
 // Data API URL
-const URL = "https://fathomless-brushlands-54478.herokuapp.com";
+const URL = "https://general-shop-server-code.vercel.app";
 
 export const getFashion = () => async (dispatch) =>{
   //* action can also be used for api calls,

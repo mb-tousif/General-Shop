@@ -1,6 +1,7 @@
 import { Box, Grid, Typography, styled, Button } from '@mui/material';
 import React from 'react';
 import { useSelector } from "react-redux";
+import EmptyCart from './EmptyCart';
 import FashionCartItems from './FashionCartItems';
 import TotalCartBalance from './TotalCartBalance';
 
@@ -33,11 +34,11 @@ const Cart = () => {
     const { CartItems } =
       useSelector((state) => state.addToCartFashion) 
       // const {CartItems} = useSelector((state) => state.addToCartFashion || state.addToCartFurniture || state.addToCartTopOffer);
-      console.log(CartItems);
+      // console.log(CartItems);
     return (
       <Box sx={{ background: "#f2f2f2", padding: "20px" }}>
         {CartItems.length ? (
-          <Grid container justifyContent="space-evenly" spacing={2}>
+          <Grid container spacing={2}>
             <Container items lg={9} md={9} sm={12} xs={12}>
               <Header>
                 <Typography>My Cart ({CartItems.length})</Typography>
@@ -50,11 +51,11 @@ const Cart = () => {
               </BtnWraper>
             </Container>
             <Container items lg={3} md={3} sm={12} xs={12}>
-              <TotalCartBalance CartItems={CartItems} />
+              <TotalCartBalance items CartItems={CartItems} />
             </Container>
           </Grid>
         ) : (
-          <Grid>EMpTY</Grid>
+          <Grid><EmptyCart/></Grid>
         )}
       </Box>
     );

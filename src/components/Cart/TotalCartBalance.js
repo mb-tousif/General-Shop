@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Box, Typography, styled } from "@mui/material";
 import React, { useEffect, useState } from 'react';
 
 const Header = styled(Box)`
@@ -67,7 +67,7 @@ const TotalCartBalance = ({CartItems}) => {
             <Price>&#2547;{price}</Price>
           </Typography>
           <Typography>
-            Discount <Price component="span">-&#2547;{discount}</Price>
+            Discount -&#2547;{discount}
           </Typography>
           <Typography>
             Delivery Charges

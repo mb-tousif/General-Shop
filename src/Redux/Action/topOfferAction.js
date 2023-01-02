@@ -7,7 +7,7 @@ export const GET_TOP_OFFER_DETAIL_FAIL = "getTopOfferDetailFail";
 export const GET_TOP_OFFER_DETAIL_RESET = "getTopOfferDetailReset";
 //* An action, is an object that contains the payload of information. They are the only source of information for the Redux store to be updated. Reducers update store based on the value of the action.type
 
-const URL = "https://fathomless-brushlands-54478.herokuapp.com";
+const URL = "https://general-shop-server-code.vercel.app";
 
 export const getTopOffer = () => async (dispatch) => {
   //* action can also be used for api calls,

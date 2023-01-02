@@ -2,6 +2,8 @@ import { Box, Typography, styled, Button } from '@mui/material';
 import React from 'react';
 import Assured from "../../Assets/images/Assured.png";
 import GroupedButton from './GroupedButton';
+import { useDispatch } from "react-redux";
+import { deleteCartFashion } from '../../Redux/Action/CartAction';
 
 const Component = styled(Box)`
   border-top: 2px solid #ffffff;
@@ -25,6 +27,10 @@ const RemoveBtn = styled(Button)`
 `
 
 const FashionCartItems = ({item}) => {
+ const dispatch = useDispatch();
+ const removeItemFromCart = (id) => {
+   dispatch(deleteCartFashion(id));
+ };
     return (
       <Component>
         <LeftComponent>
@@ -57,7 +63,7 @@ const FashionCartItems = ({item}) => {
               {item.price.discount}
             </Box>
           </Typography>
-          <RemoveBtn>Remove</RemoveBtn>
+          <RemoveBtn onClick={ () => removeItemFromCart(item._id) }>Remove</RemoveBtn>
         </Box>
       </Component>
     );

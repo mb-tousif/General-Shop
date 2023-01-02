@@ -25,7 +25,7 @@ const ActionFashion = ({ fashion }) => {
 
   const {_id}= fashion;
   // console.log(_id);
-  const [quantity, setQuantity] = useState(1)
+  const [quantity] = useState(1)
   const dispatch = useDispatch();
   const navigate = useNavigate()
   const addItemToCart = ()=>{

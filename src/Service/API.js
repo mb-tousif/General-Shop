@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://fathomless-brushlands-54478.herokuapp.com";
+const url = "https://general-shop-server-code.vercel.app";
 
 export const authenticateLogin = async (data) => {
   try {
